@@ -1,112 +1,23 @@
-**Malvinas: Voces del frente**
+# JuegoConPeriferico
+Proyecto Integrador Anual: PDISC / PWD (2026)
+EEST N°1 "Eduardo Ader" - 7° 2º Año - Prof. York / Prof. Balda
+Descripción del Proyecto
+Sustituir este texto por una explicación técnica de la solución. ¿Qué problema resuelve? ¿A qué sector industrial o social está dirigido?
 
-**![][image1]**
+Equipo de Desarrollo
+[Alan Bizzio] - (Líder de Proyecto)
 
- Bruno Fornasar, Alan Bissio y Tomás Onesti
+[Bruno Fornasar] - (Posición y trabajo)
 
-Escuela Secundaria Tecnica 1 de Vicente Lopez
+[Tomas Onesti] - (Posición y trabajo)
 
-7°2°
+??? Stack Tecnológico
+Lenguaje: Python 3.11+
 
-Mansilla York y Paula Balda
+Framework Web: Flask (Orientación PWD)
 
-17/09/2026
+Base de Datos: MySQL / MariaDB (XAMPP)
 
-# **Tabla de versionado** {#tabla-de-versionado}
+Entorno: Visual Studio Code
 
-| Versión | Fecha | Descripción del cambio | Autor | Estado |
-| ----- | ----- | ----- | ----- | ----- |
-| v0.1.0 | 21/04/2026 | Creación del primer informe con la idea inicial del proyecto. | Bruno Fornasar, Alan Bissio y Tomás Onesti | Borrador |
-| v0.2.0 | 15/05/2026 | Se realizó la investigación de mercado para definir los objetivos de nuestro proyecto. | Bruno Fornasar, Alan Bissio y Tomás Onesti | Borrador |
-| v0.2.1 | 22/05/2026 | Se corrigió y actualizó la investigación de mercado en base a los sugerido por una asesora. | Bruno Fornasar | Revisión |
-| v1.0.0 | 23/06/2026 | Se entregó el informe de la idea previa al cambio de Malvinas | Bruno Fornasar, Alan Bissio y Tomás Onesti | Aprobado |
-| v1.1.0 | 01/09/2026 | Se actualizó la sección de funcionalidades actuales y funcionalidades en proceso. También se borró la sección de funcionalidades planeadas. | Tomas Onesti, Bruno Fornasar y Alan Bissio | Revisión |
-| v1.2.0 | 15/09/2026 | Se quitó la sección de funcionalidades en proceso y se actualizó la sección de funcionalidades. | Tomas Onesti, Bruno Fornasar y Alan Bissio | Revisión |
-
-# 
-
-Índice
-
-[**Tabla de versionado	2**](#tabla-de-versionado)
-
-[**Resumen	4**](#resumen)
-
-[**Introducción	5**](#introducción)
-
-[**Objetivo del Proyecto	5**](#objetivo-del-proyecto)
-
-[**Funcionalidades	5**](#funcionalidades)
-
-[Sistema de movimiento del jugador	5](#sistema-de-movimiento-del-jugador)
-
-[Sistema de inventario	5](#sistema-de-inventario)
-
-[Sistema de frío	5](#sistema-de-frío)
-
-[Sistema de disparos	5](#sistema-de-disparos)
-
-[Sistema de enemigos	6](#sistema-de-enemigos)
-
-[Pérdida de vida y muerte	6](#pérdida-de-vida-y-muerte)
-
-[Mapa: Georgias del sur	6](#mapa:-georgias-del-sur)
-
-[Menú de inicio	6](#menú-de-inicio)
-
-[NPC	6](#npc)
-
-# **Resumen** {#resumen}
-
-La idea que se propone es la de desarrollar un videojuego cuya temática principal sea la guerra de Malvinas. En este encarnamos a un soldado Argentino que deberá sobrevivir a las tenaces condiciones de las islas mientras ocurren eventos verídicos a su alrededor. La idea es que el jugador se vea incentivado a explorar para conseguir recursos que lo ayuden a subsistir. La idea es que los recursos sean obtenidos principalmente de edificaciones que en determinados momentos de la historia estarán ocupados por los ingleses.
-
-Lo que proponemos como demo es mostrar los eventos ocurridos en la estación científica  de Grytviken a partir del 3 de Abril, en donde tras enviar un helicóptero de reconocimiento, es tiroteado desde la base científica por los ingleses, forzandolo a aterrizar alejado de la base. Tú serás un soldado que por motivos extraños quedó en la isla al momento en el que el helicóptero volvió al navío del que despegó. Es entonces que tendrás que recorrer toda la playa hasta llegar al primer puerto, un punto medio hasta tu camino hacia la base científica. la idea es que puedas ver el mapa desolado cuando estaban solo los ingleses, lleno de soldados argentinos cuando estos toman el control y luego habrá que enfrentar a los ingleses nuevamente cuando estos intenten retomar el control.
-
-# **Introducción** {#introducción}
-
-Este proyecto consiste en un videojuego que relata acontecimientos verídicos de la guerra de Malvinas mientras que plantea situaciones de supervivencia que buscan retratar lo que pasaron los soldados que fueron a aquella guerra.
-
-# **Objetivo del Proyecto** {#objetivo-del-proyecto}
-
-Concientizar y entretener al mismo tiempo. Queremos que nuestro público tenga noción acerca de lo que pasó en aquella guerra, lo que pasaron los soldados y que, sobre todo, puedan pasar un rato divertido.
-
-# **Funcionalidades** {#funcionalidades}
-
-## **Sistema de movimiento del jugador** {#sistema-de-movimiento-del-jugador}
-
-El jugador se mueve con las teclas A-Izquierda, D-Derecha, S-Abajo, W-Arriba, con una velocidad constante.
-
-## **Sistema de inventario** {#sistema-de-inventario}
-
-Actualmente se cuenta con un sistema de inventario compuesto de ocho espacios en el que se pueden almacenar objetos. El mismo se abre y cierra con la tecla I del teclado y mientras está abierto el jugador no puede moverse.
-
-## **Sistema de frío** {#sistema-de-frío}
-
-Actualmente contamos con un sistema de frío en el que a medida que pasa el tiempo frío se va acumulando en el jugador, aunque de momento no están implementadas las consecuencias. 
-
-## **Sistema de disparos** {#sistema-de-disparos}
-
-El sistema de disparos de la pistola funciona utilizando las flechas del teclado para determinar en qué dirección se dispara.
-
-## **Sistema de enemigos** {#sistema-de-enemigos}
-
-Se cuenta con un tipo de enemigo que persigue al jugador hasta llegar a una distancia de tiro, en la que frena y dispara.
-
-## **Pérdida de vida y muerte** {#pérdida-de-vida-y-muerte}
-
-El jugador puede perder vida al recibir un disparo. Al perder toda la vida el jugador morirá y se mostrará una pantalla de muerte.
-
-## **Mapa: Georgias del sur** {#mapa:-georgias-del-sur}
-
-El mapa del juego es una representación a escala de las Georgias del sur.
-
-## **Menú de inicio** {#menú-de-inicio}
-
-Se cuenta con un menú de inicio con tres opciones, Jugar, Opciones y Salir.
-
-## **NPC** {#npc}
-
-El jugador podrá interactuar con NPC(non player character: personajes no jugador) que lo guiaran a dos posibles finales.
-
-## 
-
-[image1]: <data:image/png;base64,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>
+Control de Versiones: Git / GitHub

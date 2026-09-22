@@ -41,6 +41,10 @@ public class StateController : MonoBehaviour
             //playerStates.increaseThirst(10 * thirstMultiplier);
             //playerStates.increaseHunger(10 * hungerMultiplier);
             playerStates.increaseCold(coldToIncrease * coldMultiplier);
+            if(playerStates.cold >= 100)
+            {
+                playerStates.DecreaseHP(5);
+            }
             // Debug.Log(updateStatesTime);
         }
 

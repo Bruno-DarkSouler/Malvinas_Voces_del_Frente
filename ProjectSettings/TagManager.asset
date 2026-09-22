@@ -8,6 +8,7 @@ TagManager:
   - slot
   - Inv-intermedio
   - item
+  - enemy
   layers:
   - Default
   - TransparentFX

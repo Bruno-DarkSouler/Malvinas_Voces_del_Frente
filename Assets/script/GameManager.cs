@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     private bool gameOverActive;
 
+    public ArduinoController arduinoController;
+
     void Awake()
     {
         if (instance == null)
@@ -36,14 +38,17 @@ public class GameManager : MonoBehaviour
         {
             gameOver.SetActive(false);
         }
-        if (reset != null)
+        /*if (reset != null)
         {
             reset.onClick.AddListener(ResetScene);
         }
         if (menu != null)
         {
             menu.onClick.AddListener(Menu);
-        }
+        }*/
+
+        arduinoController.Button6Pressed += ReloadGame;
+        arduinoController.Button7Pressed += QuitGame;
     }
 
     // Update is called once per frame
@@ -51,13 +56,13 @@ public class GameManager : MonoBehaviour
     {
         if (gameOverActive)
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 ResetScene();
             }
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Menu();
+                QuitGame();
             }
         }
     }
@@ -72,10 +77,6 @@ public class GameManager : MonoBehaviour
             gameOver.SetActive(true);
         }
 
-        if (gameOverText != null)
-        {
-            gameOverText.text = "You Dead\n\nR - Reiniciar\nEsc - Volver al Menu";
-        }
 
     }
 
@@ -89,5 +90,28 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+    }
+
+
+
+    public void ReloadGame()
+    {
+        if (gameOverActive)
+        {
+            UnityEngine.SceneManagement.Scene currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentScene.name);
+        }
+    }
+
+    public void QuitGame()
+    {
+        if (gameOverActive)
+        {
+            Application.Quit();
+
+            #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+            #endif
+        }
     }
 }

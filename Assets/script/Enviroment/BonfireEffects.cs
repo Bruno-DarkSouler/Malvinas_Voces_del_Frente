@@ -33,7 +33,7 @@ public class BonfireEffects : MonoBehaviour
 
         if (isNearBonfire && timeManager.minutes - lastUpdate >= 1)
         {
-            playerStates.decreaseCold(20);
+            playerStates.cold = 0;
             lastUpdate = timeManager.minutes;
         }
     }

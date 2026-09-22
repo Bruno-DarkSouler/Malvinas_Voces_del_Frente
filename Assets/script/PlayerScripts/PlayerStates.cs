@@ -142,10 +142,10 @@ public class PlayerStates : MonoBehaviour
     {
         if (HP <= 0)
         {
-            Debug.Log("Funciono 1");
+            //Debug.Log("Funciono 1");
            if(GameManager.instance != null)
             {
-                Debug.Log("Funciono 2");
+                //Debug.Log("Funciono 2");
                 GameManager.instance.GameOver();
             }
         }

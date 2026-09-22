@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class objectController : MonoBehaviour
 {
-     void OnTriggerEnter2D(Collider2D collider)
-     {
+    public PlayerStates playerStates;
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
         if (collider.CompareTag("Player"))
         {
+            playerStates.increaseHP(20);
+            playerStates.cold = 0;
             Destroy(gameObject);
         }
-     }
-
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
     }
 }
