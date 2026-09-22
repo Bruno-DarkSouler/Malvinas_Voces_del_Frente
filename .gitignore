@@ -24,6 +24,7 @@ logs
 ^*.private.[0-9]+.meta$
 .vs
 .vscode
+.vsconfig
 .idea
 .gradle
 ExportedObj
