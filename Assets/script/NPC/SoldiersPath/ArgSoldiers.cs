@@ -7,7 +7,7 @@ using UnityEngine;
 public class ArgSoldiers : MonoBehaviour
 {
     [Header("Configuracion del movimiento")]
-    public float speed = 10.5f;
+    public float speed = 6f;
 
     [Header("Configuracion del movimiento")]
     [Tooltip("Camino inicial para llegar al lugar del evento")]
@@ -20,6 +20,7 @@ public class ArgSoldiers : MonoBehaviour
     public bool pathDone = false;
     public Transform[] onceWaypoints2;
     private Animator animator;
+    [SerializeField] private float separacion = 1.0f;
 
     public bool pathDone2 = false;
 
@@ -58,6 +59,7 @@ public class ArgSoldiers : MonoBehaviour
         //Debug.Log(pathDone);
         //Debug.Log(finishedPath);
         //Debug.Log("-----------Tiempo-------------");
+        Separate();
         animator.SetBool("IsMoving", false);//Le decimos que se quede quieto
         if (currentStage == 0 && timeManager.timePassed / 60 > pathTime)
         {
@@ -180,6 +182,20 @@ public class ArgSoldiers : MonoBehaviour
         if (Vector2.Distance(transform.position, targetWaypoint.position) < 1f)
         {
             currentOnceIndex++;
+        }
+    }
+
+    void Separate()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, separacion);
+        
+        foreach (Collider2D col in colliders)
+        {
+            if (col.gameObject != gameObject && col.GetComponent<ArgSoldiers>() != null)
+            {
+                Vector2 directionAway = (transform.position - col.transform.position).normalized;
+                transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + directionAway, speed * Time.deltaTime);
+            }
         }
     }
 }

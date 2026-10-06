@@ -47,7 +47,7 @@ public class inventoryScript : MonoBehaviour
         }
         else
         {
-            player.speed = 6;
+            player.speed = 8;
         }
     }
 }

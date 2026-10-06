@@ -20,11 +20,11 @@ public class StateController : MonoBehaviour
 
     void Start()
     {
-        coldMultiplier = 1;
+        coldMultiplier = 0.5f;
         hungerMultiplier = 1;
         thirstMultiplier = 1;
 
-        coldToIncrease = 20;
+        coldToIncrease = 10f;
 
         updateStatesTime = 0f;
 

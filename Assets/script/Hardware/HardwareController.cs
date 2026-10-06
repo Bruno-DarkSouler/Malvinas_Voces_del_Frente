@@ -16,7 +16,7 @@ public class ArduinoController : MonoBehaviour
     public bool sPressed;
     public bool dPressed;
 
-    // Eventos para los botones de acción
+    // Eventos para los botones de accion
     public event Action Button5Pressed;
     public event Action Button6Pressed;
     public event Action Button7Pressed;
@@ -57,7 +57,7 @@ public class ArduinoController : MonoBehaviour
         }
         catch (TimeoutException)
         {
-            // No hay problema: simplemente no había datos disponibles.
+            // No hay problema: simplemente no habï¿½a datos disponibles.
         }
     }
 
