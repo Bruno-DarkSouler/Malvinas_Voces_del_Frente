@@ -15,17 +15,10 @@ public class GameManager : MonoBehaviour
 
     private bool gameOverActive;
 
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+
+    //CAmbios que no importan
+
+    
 
 
 
