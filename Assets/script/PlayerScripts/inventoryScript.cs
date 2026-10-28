@@ -7,8 +7,10 @@ public class inventoryScript : MonoBehaviour
 {
     [SerializeField] private List<GameObject> Backpack = new List<GameObject>();
     [SerializeField] private GameObject inventory;
+    [SerializeField] private int ID;
     public topdownmovent player;
     public bool lifeInv;
+    public GameObject selector;
 
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -49,5 +51,35 @@ public class inventoryScript : MonoBehaviour
         {
             player.speed = 8;
         }
+        Navegacion();
     }
+
+    void Navegacion(){
+        if(Input.GetKeyDown(KeyCode.D) && ID < Backpack.Count-1){
+            ID++;
+        }
+        if(Input.GetKeyDown(KeyCode.A) && ID > 0){
+            ID--;
+        }
+        if(Input.GetKeyDown(KeyCode.W) && ID > 3){
+            ID -= 4;
+        }
+        if(Input.GetKeyDown(KeyCode.S) && ID < 4){
+            ID += 4;
+        }
+
+        selector.transform.position = Backpack[ID].transform.position;
+
+        if(Input.GetKeyDown(KeyCode.E)){
+            Image imagen = Backpack[ID].GetComponent<Image>();
+            if (imagen.enabled == true)
+            {
+                imagen.enabled = false;
+                imagen.sprite = null;
+            }
+        }
+    }
+
+
+
 }
