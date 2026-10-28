@@ -507,7 +507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1e857ae5fbfab43be9c68dacaa0ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStates: {fileID: 1641685484}
 --- !u!1 &44813576
 GameObject:
   m_ObjectHideFlags: 0
@@ -22752,7 +22751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1e857ae5fbfab43be9c68dacaa0ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStates: {fileID: 1641685484}
 --- !u!1001 &181283795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23105,7 +23103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1e857ae5fbfab43be9c68dacaa0ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStates: {fileID: 1641685484}
 --- !u!1 &238288700
 GameObject:
   m_ObjectHideFlags: 0
@@ -23306,7 +23303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &289477585
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28363,7 +28360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &946036414
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28813,7 +28810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1e857ae5fbfab43be9c68dacaa0ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStates: {fileID: 1641685484}
 --- !u!1001 &1063160448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32678,7 +32674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1e857ae5fbfab43be9c68dacaa0ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStates: {fileID: 1641685484}
 --- !u!61 &1393602585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36077,7 +36072,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1e857ae5fbfab43be9c68dacaa0ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStates: {fileID: 1641685484}
 --- !u!1 &1562815238
 GameObject:
   m_ObjectHideFlags: 0
@@ -36350,7 +36344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1e857ae5fbfab43be9c68dacaa0ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStates: {fileID: 1641685484}
 --- !u!61 &1576111434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37147,7 +37140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1601341289
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38086,6 +38079,7 @@ MonoBehaviour:
   player: {fileID: 1641685476}
   lifeInv: 0
   selector: {fileID: 716805489}
+  playerStates: {fileID: 1641685484}
 --- !u!114 &1641685488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38704,7 +38698,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1e857ae5fbfab43be9c68dacaa0ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStates: {fileID: 1641685484}
 --- !u!61 &1721763429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39652,7 +39645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1e857ae5fbfab43be9c68dacaa0ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStates: {fileID: 1641685484}
 --- !u!61 &1816910801
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42707,7 +42699,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1e857ae5fbfab43be9c68dacaa0ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStates: {fileID: 1641685484}
 --- !u!61 &2128438417
 BoxCollider2D:
   m_ObjectHideFlags: 0

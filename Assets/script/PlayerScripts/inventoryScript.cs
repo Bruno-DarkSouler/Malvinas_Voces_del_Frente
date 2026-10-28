@@ -11,7 +11,8 @@ public class inventoryScript : MonoBehaviour
     public topdownmovent player;
     public bool lifeInv;
     public GameObject selector;
-
+    public PlayerStates playerStates;
+    
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("item"))
@@ -70,12 +71,14 @@ public class inventoryScript : MonoBehaviour
 
         selector.transform.position = Backpack[ID].transform.position;
 
-        if(Input.GetKeyDown(KeyCode.E)){
+        if(lifeInv && Input.GetKeyDown(KeyCode.E)){
             Image imagen = Backpack[ID].GetComponent<Image>();
             if (imagen.enabled == true)
             {
                 imagen.enabled = false;
                 imagen.sprite = null;
+                playerStates.increaseHP(20);
+                playerStates.cold = 0;
             }
         }
     }
